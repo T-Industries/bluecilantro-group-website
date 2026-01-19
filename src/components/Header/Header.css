@@ -81,12 +81,12 @@
 
 .nav-link:hover {
   color: var(--primary-color);
-  background-color: rgba(16, 166, 144, 0.08);
+  background-color: rgba(61, 73, 135, 0.08);
 }
 
 .nav-link.active {
   color: var(--primary-color);
-  background-color: rgba(16, 166, 144, 0.1);
+  background-color: rgba(61, 73, 135, 0.1);
 }
 
 /* Mobile Menu Button */
