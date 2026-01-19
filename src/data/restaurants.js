@@ -15,7 +15,7 @@ export const restaurants = [
     cuisine: "Breakfast & Brunch",
     description: "Canada's beloved breakfast destination serving creative morning dishes with fresh fruits and homemade crepes since 1987.",
     website: "https://www.chezcora.com/",
-    logo: "https://www.chezcora.com/themes/cora/images/logo.svg",
+    logo: "/Cora.png",
     image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=1200&h=600&fit=crop",
     color: "#ff6b35"
   },
@@ -35,7 +35,7 @@ export const restaurants = [
     cuisine: "Steakhouse & Bar",
     description: "Premium steakhouse offering the finest cuts, succulent ribs, and an extensive menu in an upscale casual setting.",
     website: "https://www.batonrouge.ca/",
-    logo: "https://www.batonrouge.ca/themes/batonrouge/images/logo.svg",
+    logo: "/baton.png",
     image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&h=600&fit=crop",
     color: "#9d0208"
   },
