@@ -1,0 +1,109 @@
+.our-brands-page {
+  padding-top: 75px;
+}
+
+/* Page Hero */
+.page-hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.page-description {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Brands Grid */
+.brands-section {
+  background-color: var(--accent-color);
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CTA Section */
+.brands-cta {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.brands-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.brands-cta p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.brands-cta .btn-primary {
+  background-color: white !important;
+  color: var(--primary-color) !important;
+  border-color: white !important;
+}
+
+.brands-cta .btn-primary:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-hero {
+    padding: 60px 0;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-brands-page {
+    padding-top: 65px;
+  }
+
+  .page-hero {
+    padding: 50px 0;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+  }
+
+  .brands-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .brands-cta h2 {
+    font-size: 1.6rem;
+  }
+}

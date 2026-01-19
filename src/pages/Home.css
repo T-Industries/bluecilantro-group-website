@@ -1,0 +1,147 @@
+.home-page {
+  padding-top: 0;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+}
+
+.welcome-features {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.feature-label {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* About Preview Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-content .btn {
+  margin-top: 10px;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(61, 73, 135, 0.3);
+}
+
+.image-placeholder span {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .welcome-features {
+    gap: 40px;
+  }
+
+  .feature-number {
+    font-size: 3rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+
+  .image-placeholder span {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-features {
+    gap: 30px;
+  }
+
+  .feature-number {
+    font-size: 2.5rem;
+  }
+
+  .feature-label {
+    font-size: 0.9rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-features {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-placeholder span {
+    font-size: 3rem;
+  }
+}
