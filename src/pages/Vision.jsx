@@ -42,7 +42,7 @@ const Vision = () => {
       </section>
 
       {/* Vision Statement */}
-      <section className="vision-statement section" style={{ backgroundColor: 'var(--primary-color)' }}>
+      <section className="vision-statement section">
         <div className="container">
           <div className="vision-quote">
             <h2>"To be the leading hospitality group that celebrates culinary diversity
