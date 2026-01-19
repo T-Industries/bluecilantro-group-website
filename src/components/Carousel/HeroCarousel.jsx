@@ -30,12 +30,11 @@ const HeroCarousel = () => {
               <div className="carousel-overlay"></div>
               <div className="carousel-content">
                 <div className="carousel-logo-container">
-                  <div
-                    className="carousel-logo-placeholder"
-                    style={{ backgroundColor: restaurant.color }}
-                  >
-                    {restaurant.name.charAt(0)}
-                  </div>
+                  <img
+                    src={restaurant.logo}
+                    alt={`${restaurant.name} logo`}
+                    className="carousel-logo"
+                  />
                 </div>
                 <Carousel.Caption className="carousel-caption-custom">
                   <h2 className="carousel-title">{restaurant.name}</h2>

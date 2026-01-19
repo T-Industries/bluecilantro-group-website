@@ -5,9 +5,9 @@ export const restaurants = [
     cuisine: "Italian Street Food",
     description: "Authentic Italian street food experience featuring fresh pasta, paninis, and traditional recipes crafted with passion.",
     website: "https://viacibo.com/",
-    logo: "https://viacibo.com/wp-content/uploads/2023/03/via-cibo-logo.svg",
+    logo: "https://viacibo.com/wp-content/uploads/2024/05/viacibo_logo.svg",
     image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?w=1200&h=600&fit=crop",
-    color: "#e63946"
+    color: "#191213ff"
   },
   {
     id: 2,
@@ -21,11 +21,11 @@ export const restaurants = [
   },
   {
     id: 3,
-    name: "Wendel Clark's Classic Grill & Sports Bar",
+    name: "Wendel Clark's",
     cuisine: "Sports Bar & Grill",
     description: "A legendary sports bar experience featuring classic North American grill favorites in an exciting game-day atmosphere.",
     website: "https://wendelclarks.com/",
-    logo: "https://wendelclarks.com/wp-content/uploads/2021/01/wendel-clarks-logo.png",
+    logo: "https://wendelclarks.com/wp-content/uploads/2022/09/Wendel-Clarks-Logo-160h.png",
     image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&h=600&fit=crop",
     color: "#1d3557"
   },
@@ -45,7 +45,7 @@ export const restaurants = [
     cuisine: "Indian Cuisine",
     description: "Authentic Indian culinary experience featuring traditional recipes, aromatic spices, and flavors from across the subcontinent.",
     website: "https://bahubali.ca/",
-    logo: "https://bahubali.ca/wp-content/uploads/2023/01/bahubali-logo.png",
+    logo: "https://bahubali.ca/wp-content/uploads/2024/01/logo-1.png",
     image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&h=600&fit=crop",
     color: "#ff9f1c"
   }

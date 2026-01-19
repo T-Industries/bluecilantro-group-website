@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-section">
             <div className="footer-logo">
-              <span className="footer-logo-icon">BC</span>
+              {/* <span className="footer-logo-icon">BC</span> */}
               <span className="footer-logo-text">
                 <span className="logo-blue">Blue</span>
                 <span className="logo-cilantro">Cilantro</span>

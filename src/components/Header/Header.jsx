@@ -38,7 +38,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
       <div className="header-container">
         <Link to="/" className="logo">
-          <span className="logo-icon">BC</span>
+          {/* <span className="logo-icon">BC</span> */}
           <span className="logo-text">
             <span className="logo-blue">Blue</span>
             <span className="logo-cilantro">Cilantro</span>
