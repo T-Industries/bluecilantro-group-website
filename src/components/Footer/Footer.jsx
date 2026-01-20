@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { restaurants, companyInfo } from '../../data/restaurants';
 import './Footer.css';
 
@@ -67,10 +67,6 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-title">Contact Us</h4>
             <div className="footer-contact">
-              <div className="contact-item">
-                <FaEnvelope className="contact-icon" />
-                <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
-              </div>
               <div className="contact-item">
                 <FaPhone className="contact-icon" />
                 <a href={`tel:${companyInfo.phone.replace(/\s/g, '')}`}>{companyInfo.phone}</a>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaCheck, FaClock } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt, FaCheck, FaClock } from 'react-icons/fa';
 import { companyInfo } from '../data/restaurants';
 import './Contact.css';
 
@@ -82,16 +82,6 @@ const Contact = () => {
               </p>
 
               <div className="info-cards">
-                <div className="info-card">
-                  <div className="info-icon">
-                    <FaEnvelope />
-                  </div>
-                  <div className="info-content">
-                    <h3>Email</h3>
-                    <a href={`mailto:${companyInfo.email}`}>{companyInfo.email}</a>
-                  </div>
-                </div>
-
                 <div className="info-card">
                   <div className="info-icon">
                     <FaPhone />

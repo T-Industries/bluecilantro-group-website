@@ -54,7 +54,6 @@ export const restaurants = [
 export const companyInfo = {
   name: "BlueCilantro Hospitality Group",
   tagline: "Creating Extraordinary Dining Experiences",
-  email: "hello@bluecilantro.com",
   phone: "+1 (780) 882-8882",
   location: {
     city: "Grande Prairie",
