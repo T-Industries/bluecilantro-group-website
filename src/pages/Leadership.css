@@ -49,7 +49,10 @@
 .leader-name {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--text-dark);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 5px;
 }
 
@@ -133,7 +136,10 @@
 
 .value-card h3 {
   font-size: 1.2rem;
-  color: var(--text-dark);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 10px;
 }
 

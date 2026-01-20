@@ -40,7 +40,10 @@
 
 .benefit-card h3 {
   font-size: 1.1rem;
-  color: var(--text-dark);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 10px;
 }
 

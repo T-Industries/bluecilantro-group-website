@@ -6,7 +6,7 @@ export const restaurants = [
     description: "Authentic Italian street food experience featuring fresh pasta, paninis, and traditional recipes crafted with passion.",
     website: "https://viacibo.com/",
     logo: "https://viacibo.com/wp-content/uploads/2024/05/viacibo_logo.svg",
-    image: "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?w=1200&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&h=600&fit=crop",
     color: "#191213ff"
   },
   {
@@ -27,7 +27,7 @@ export const restaurants = [
     website: "https://wendelclarks.com/",
     logo: "https://wendelclarks.com/wp-content/uploads/2022/09/Wendel-Clarks-Logo-160h.png",
     image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&h=600&fit=crop",
-    color: "#1d3557"
+    color: "#1e2c40ff"
   },
   {
     id: 4,

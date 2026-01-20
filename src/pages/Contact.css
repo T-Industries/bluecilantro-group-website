@@ -13,7 +13,10 @@
 /* Contact Info */
 .contact-info h2 {
   font-size: 2rem;
-  color: var(--text-dark);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 15px;
 }
 
@@ -86,7 +89,10 @@
 
 .contact-form h2 {
   font-size: 1.5rem;
-  color: var(--text-dark);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 25px;
 }
 

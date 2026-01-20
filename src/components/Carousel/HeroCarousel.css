@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgb(222 224 235 / 70%) 0%, rgba(45, 54, 104, 0.85) 100%);
+  background: linear-gradient(to bottom, rgb(222 224 235 / 70%) 0%, rgba(45, 54, 104, 0.60) 100%);
 }
 
 .carousel-content {
@@ -115,7 +115,7 @@
 .hero-carousel .carousel-control-next-icon {
   width: 50px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.51);
   border-radius: 50%;
   background-size: 40%;
 }

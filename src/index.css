@@ -4,7 +4,7 @@
   --primary-light: #5a6aa8;
   --gradient-start: #3d4987;
   --gradient-end: #2d3668;
-  --gradient-primary: linear-gradient(135deg, #3d4987 0%, #2d3668 100%);
+  --gradient-primary: linear-gradient(135deg, #8d95bb 0%, #09196f 100%);
   --gradient-primary-hover: linear-gradient(135deg, #5a6aa8 0%, #3d4987 100%);
   --secondary-color: #ffffff;
   --accent-color: #f8f9fa;
@@ -58,7 +58,10 @@ img {
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -72,7 +75,7 @@ img {
 }
 
 .btn-primary {
-  background: var(--gradient-primary) !important;
+  /* background: var(--gradient-primary) !important; */
   border: none !important;
   padding: 12px 30px;
   font-weight: 500;
