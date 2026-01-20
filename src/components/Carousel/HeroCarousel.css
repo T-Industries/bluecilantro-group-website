@@ -1,6 +1,34 @@
 .hero-carousel {
-  margin-top: 75px;
+  margin-top: 90px;
 }
+
+/* Smooth Fade Transition */
+.hero-carousel .carousel-item {
+  transition: opacity 1.5s ease-in-out !important;
+  -webkit-transition: opacity 1.5s ease-in-out !important;
+}
+
+.hero-carousel .carousel-item-next,
+.hero-carousel .carousel-item-prev,
+.hero-carousel .carousel-item.active {
+  transition: opacity 1.5s ease-in-out !important;
+  -webkit-transition: opacity 1.5s ease-in-out !important;
+}
+
+.hero-carousel.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out !important;
+}
+
+.hero-carousel.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+.hero-carousel.carousel-fade .carousel-item-next.carousel-item-start,
+.hero-carousel.carousel-fade .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+}
+
 
 .carousel-slide {
   height: 85vh;

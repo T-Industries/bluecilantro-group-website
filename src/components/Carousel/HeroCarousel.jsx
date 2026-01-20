@@ -11,11 +11,11 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="hero-carousel">
+    <div className="hero-carousel carousel-fade">
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
-        interval={2000}
+        interval={5000}
         pause="hover"
         indicators={true}
         controls={true}

@@ -13,11 +13,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-section">
             <div className="footer-logo">
-              {/* <span className="footer-logo-icon">BC</span> */}
-              <span className="footer-logo-text">
-                <span className="logo-blue">Blue</span>
-                <span className="logo-cilantro">Cilantro</span>
-              </span>
+              <img src="/BlueCilantroLogo.png" alt="BlueCilantro Hospitality Group" className="footer-logo-image" />
             </div>
             <p className="footer-tagline">{companyInfo.tagline}</p>
             <div className="footer-social">

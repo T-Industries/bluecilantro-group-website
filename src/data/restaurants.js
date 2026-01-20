@@ -6,8 +6,8 @@ export const restaurants = [
     description: "Authentic Italian street food experience featuring fresh pasta, paninis, and traditional recipes crafted with passion.",
     website: "https://viacibo.com/",
     logo: "https://viacibo.com/wp-content/uploads/2024/05/viacibo_logo.svg",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&h=600&fit=crop",
-    color: "#191213ff"
+    image: "https://viacibo.com/wp-content/uploads/2024/05/JUMPciboEXTa3s.jpg",
+    // color: "#191213ff"
   },
   {
     id: 2,
@@ -16,8 +16,8 @@ export const restaurants = [
     description: "Canada's beloved breakfast destination serving creative morning dishes with fresh fruits and homemade crepes since 1987.",
     website: "https://www.chezcora.com/",
     logo: "/Cora.png",
-    image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=1200&h=600&fit=crop",
-    color: "#ff6b35"
+    image: "https://e3b2rn3eqfa.exactdn.com/wp-content/uploads/2021/08/menu-cora-pancakes.jpg",
+    // color: "#ff6b35"
   },
   {
     id: 3,
@@ -26,8 +26,8 @@ export const restaurants = [
     description: "A legendary sports bar experience featuring classic North American grill favorites in an exciting game-day atmosphere.",
     website: "https://wendelclarks.com/",
     logo: "https://wendelclarks.com/wp-content/uploads/2022/09/Wendel-Clarks-Logo-160h.png",
-    image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&h=600&fit=crop",
-    color: "#1e2c40ff"
+    image: "https://wendelclarks.com/wp-content/uploads/2022/12/WC-Oshawa-bar.jpg",
+    // color: "#1e2c40ff"
   },
   {
     id: 4,
@@ -36,8 +36,8 @@ export const restaurants = [
     description: "Premium steakhouse offering the finest cuts, succulent ribs, and an extensive menu in an upscale casual setting.",
     website: "https://www.batonrouge.ca/",
     logo: "/baton.png",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&h=600&fit=crop",
-    color: "#9d0208"
+    image: "https://baton-rouge-cdn.s3.amazonaws.com/BR24_DIG_045_grillshots_resize_1444x540_APR24_V13.jpg",
+    // color: "#9d0208"
   },
   {
     id: 5,
@@ -46,8 +46,18 @@ export const restaurants = [
     description: "Authentic Indian culinary experience featuring traditional recipes, aromatic spices, and flavors from across the subcontinent.",
     website: "https://bahubali.ca/",
     logo: "https://bahubali.ca/wp-content/uploads/2024/01/logo-1.png",
-    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&h=600&fit=crop",
-    color: "#ff9f1c"
+    image: "https://bahubali.ca/wp-content/uploads/2024/07/bahubali-17.png",
+    // color: "#ff9f1c"
+  },
+  {
+    id: 6,
+    name: "BlueCilantro Catering",
+    cuisine: "Catering Services",
+    description: "We offer services for all occasions, specializing in corporate events, weddings, and private parties with customizable menus to suit your needs.",
+    website: "https://bahubali.ca/",
+    logo: "/BlueCilantro.png",
+    image: "/BlueCilantro.png",
+    // color: "#ff9f1c"
   }
 ];
 

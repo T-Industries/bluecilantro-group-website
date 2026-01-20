@@ -57,8 +57,7 @@ const Home = () => {
             </div>
             <div className="about-image">
               <div className="image-placeholder">
-                <span className="logo-blue">Blue</span>
-                <span className="logo-cilantro">Cilantro</span>
+                <img src="/BlueCilantroLogo.png" alt="BlueCilantro Hospitality Group" className="placeholder-logo" />
               </div>
             </div>
           </div>

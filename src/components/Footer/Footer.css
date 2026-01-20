@@ -25,6 +25,12 @@
   margin-bottom: 15px;
 }
 
+.footer-logo-image {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
 .footer-logo-icon {
   width: 45px;
   height: 45px;
@@ -250,5 +256,9 @@
 
   .footer-logo-text {
     font-size: 1.2rem;
+  }
+
+  .footer-logo-image {
+    height: 70px;
   }
 }

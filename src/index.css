@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
   --primary-color: #3d4987;
   --primary-dark: #2d3668;
@@ -8,9 +10,9 @@
   --gradient-primary-hover: linear-gradient(135deg, #5a6aa8 0%, #3d4987 100%);
   --secondary-color: #ffffff;
   --accent-color: #f8f9fa;
-  --text-dark: #333333;
-  --text-light: #666666;
-  --text-muted: #999999;
+  --text-dark: #1a1a1a;
+  --text-light: #555555;
+  --text-muted: #888888;
 }
 
 * {
@@ -21,13 +23,16 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.7;
   color: var(--text-dark);
   background-color: var(--secondary-color);
+  font-weight: 400;
 }
 
 a {
@@ -75,38 +80,42 @@ img {
 }
 
 .btn-primary {
-  /* background: var(--gradient-primary) !important; */
+  background: var(--gradient-primary) !important;
   border: none !important;
-  padding: 12px 30px;
+  padding: 14px 36px;
   font-weight: 500;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+  letter-spacing: 1.5px;
+  transition: all 0.4s ease;
+  border-radius: 0;
 }
 
 .btn-primary:hover {
   background: var(--gradient-primary-hover) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(61, 73, 135, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(61, 73, 135, 0.35);
 }
 
 .btn-outline-primary {
   color: var(--primary-color) !important;
-  border-color: var(--primary-color) !important;
-  padding: 12px 30px;
+  border: 2px solid var(--primary-color) !important;
+  padding: 12px 36px;
   font-weight: 500;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+  letter-spacing: 1.5px;
+  transition: all 0.4s ease;
   background: transparent !important;
+  border-radius: 0;
 }
 
 .btn-outline-primary:hover {
   background: var(--gradient-primary) !important;
   border-color: transparent !important;
   color: white !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(61, 73, 135, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(61, 73, 135, 0.35);
 }
 
 /* Page transition */

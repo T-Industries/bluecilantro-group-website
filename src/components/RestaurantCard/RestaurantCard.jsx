@@ -8,13 +8,7 @@ const RestaurantCard = ({ restaurant }) => {
         className="card-image"
         style={{ backgroundImage: `url(${restaurant.image})` }}
       >
-        <div className="card-overlay" style={{ backgroundColor: `${restaurant.color}CC` }}>
-          <img
-            src={restaurant.logo}
-            alt={`${restaurant.name} logo`}
-            className="card-logo"
-          />
-        </div>
+        <div className="card-overlay" style={{ backgroundColor: `${restaurant.color}CC` }}></div>
       </div>
       <div className="card-body">
         <span className="card-cuisine">{restaurant.cuisine}</span>

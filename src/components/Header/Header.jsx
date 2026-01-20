@@ -5,17 +5,31 @@ import './Header.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+
+      // Add scrolled class when past threshold
+      setIsScrolled(currentScrollY > 50);
+
+      // Hide header when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -35,14 +49,10 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? 'header-scrolled' : ''} ${isHidden ? 'header-hidden' : ''}`}>
       <div className="header-container">
         <Link to="/" className="logo">
-          {/* <span className="logo-icon">BC</span> */}
-          <span className="logo-text">
-            <span className="logo-blue">Blue</span>
-            <span className="logo-cilantro">Cilantro</span>
-          </span>
+          <img src="/BlueCilantroLogo.png" alt="BlueCilantro Hospitality Group" className="logo-image" />
         </Link>
 
         <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
