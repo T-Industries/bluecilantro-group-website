@@ -41,7 +41,7 @@ const Footer = () => {
             <h4 className="footer-title">Quick Links</h4>
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/our-brands">Our Brands</Link></li>
+              <li><Link to="/our-brands">Our Restaurants</Link></li>
               <li><Link to="/leadership">Leadership</Link></li>
               <li><Link to="/vision">Vision</Link></li>
               <li><Link to="/career">Careers</Link></li>
@@ -49,9 +49,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Our Brands */}
+          {/* Our Restaurants */}
           <div className="footer-section">
-            <h4 className="footer-title">Our Brands</h4>
+            <h4 className="footer-title">Our Restaurants</h4>
             <ul className="footer-links">
               {restaurants.map((restaurant) => (
                 <li key={restaurant.id}>

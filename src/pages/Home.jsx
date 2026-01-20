@@ -31,7 +31,7 @@ const Home = () => {
             </div>
           </div>
           <Link to="/our-brands" className="btn btn-primary">
-            Explore Our Brands
+            Explore Our Restaurants
           </Link>
         </div>
       </section>
@@ -57,7 +57,8 @@ const Home = () => {
             </div>
             <div className="about-image">
               <div className="image-placeholder">
-                <span>BC</span>
+                <span className="logo-blue">Blue</span>
+                <span className="logo-cilantro">Cilantro</span>
               </div>
             </div>
           </div>

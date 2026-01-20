@@ -23,7 +23,7 @@ const Header = () => {
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/our-brands', label: 'Our Brands' },
+    { path: '/our-brands', label: 'Our Restaurants' },
     { path: '/leadership', label: 'Leadership' },
     { path: '/vision', label: 'Vision' },
     { path: '/career', label: 'Career' },

@@ -8,7 +8,7 @@ const OurBrands = () => {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1 className="page-title">Our Brands</h1>
+          <h1 className="page-title">Our Restaurants</h1>
           <p className="page-description">
             Discover our family of restaurants, each offering unique culinary experiences
             that celebrate diverse cuisines and cultures from around the world.

@@ -20,11 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(61, 73, 135, 0.7) 0%,
-    rgba(45, 54, 104, 0.85) 100%
-  );
+  background: linear-gradient(to bottom, rgb(222 224 235 / 70%) 0%, rgba(45, 54, 104, 0.85) 100%);
 }
 
 .carousel-content {
