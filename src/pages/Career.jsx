@@ -94,11 +94,14 @@ const Career = () => {
   };
 
   return (
-    <div className="career-page page-container">
+    <div className="career-page">
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1 className="page-title">Join Our Team</h1>
+          <span className="page-label">Careers</span>
+          <h1 className="page-title">
+            Join Our <em>Team</em>
+          </h1>
           <p className="page-description">
             Build your career with BlueCilantro Hospitality Group. We're always
             looking for passionate individuals who share our love for great food and exceptional service.
@@ -107,7 +110,7 @@ const Career = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="benefits-section section" style={{ backgroundColor: 'var(--accent-color)' }}>
+      <section className="benefits-section">
         <div className="container">
           <h2 className="section-title">Why Work With Us?</h2>
           <p className="section-subtitle">
@@ -147,7 +150,7 @@ const Career = () => {
       </section>
 
       {/* Application Form Section */}
-      <section className="application-section section">
+      <section className="application-section">
         <div className="container">
           <h2 className="section-title">Apply Now</h2>
           <p className="section-subtitle">

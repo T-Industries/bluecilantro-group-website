@@ -57,11 +57,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page page-container">
+    <div className="contact-page">
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1 className="page-title">Contact Us</h1>
+          <span className="page-label">Get in Touch</span>
+          <h1 className="page-title">
+            Let's Start a <em>Conversation</em>
+          </h1>
           <p className="page-description">
             We'd love to hear from you. Whether you have a question, feedback,
             or partnership inquiry, we're here to help.
@@ -70,7 +73,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="contact-section section">
+      <section className="contact-section">
         <div className="container">
           <div className="contact-grid">
             {/* Contact Info */}

@@ -3,11 +3,14 @@ import './Vision.css';
 
 const Vision = () => {
   return (
-    <div className="vision-page page-container">
+    <div className="vision-page">
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1 className="page-title">Our Vision</h1>
+          <span className="page-label">Our Purpose</span>
+          <h1 className="page-title">
+            Shaping the <em>Future</em> of Dining
+          </h1>
           <p className="page-description">
             Building a future where every meal is a memorable experience that
             brings people together and celebrates the world's diverse culinary traditions.
@@ -16,7 +19,7 @@ const Vision = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="mission-section section">
+      <section className="mission-section">
         <div className="container">
           <div className="mission-content">
             <div className="mission-text">
@@ -52,7 +55,7 @@ const Vision = () => {
       </section>
 
       {/* Core Values */}
-      <section className="core-values section" style={{ backgroundColor: 'var(--accent-color)' }}>
+      <section className="core-values">
         <div className="container">
           <h2 className="section-title">What We Stand For</h2>
           <p className="section-subtitle">
@@ -106,7 +109,7 @@ const Vision = () => {
       </section>
 
       {/* Goals Section */}
-      <section className="goals-section section">
+      <section className="goals-section">
         <div className="container">
           <h2 className="section-title">Our Goals</h2>
           <p className="section-subtitle">

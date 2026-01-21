@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
@@ -9,6 +9,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const mouseTimeoutRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,18 +18,44 @@ const Header = () => {
       // Add scrolled class when past threshold
       setIsScrolled(currentScrollY > 50);
 
-      // Hide header when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Hide immediately when scrolling down
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsHidden(true);
-      } else {
+      } else if (currentScrollY < lastScrollY) {
+        // Show when scrolling up
         setIsHidden(false);
       }
 
       setLastScrollY(currentScrollY);
     };
 
+    const handleMouseMove = () => {
+      // Show header on mouse movement
+      setIsHidden(false);
+
+      // Clear existing timeout
+      if (mouseTimeoutRef.current) {
+        clearTimeout(mouseTimeoutRef.current);
+      }
+
+      // Hide after 2 seconds of no movement
+      mouseTimeoutRef.current = setTimeout(() => {
+        if (window.scrollY > 50) {
+          setIsHidden(true);
+        }
+      }, 2000);
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (mouseTimeoutRef.current) {
+        clearTimeout(mouseTimeoutRef.current);
+      }
+    };
   }, [lastScrollY]);
 
   useEffect(() => {

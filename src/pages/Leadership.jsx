@@ -4,11 +4,14 @@ import './Leadership.css';
 
 const Leadership = () => {
   return (
-    <div className="leadership-page page-container">
+    <div className="leadership-page">
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <h1 className="page-title">Our Leadership</h1>
+          <span className="page-label">Our Team</span>
+          <h1 className="page-title">
+            Visionary <em>Leadership</em>
+          </h1>
           <p className="page-description">
             Meet the visionary leaders driving BlueCilantro Hospitality Group's mission
             to create extraordinary dining experiences.
@@ -17,41 +20,39 @@ const Leadership = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="leadership-section section">
-        <div className="container">
-          <div className="leadership-grid">
-            {leadership.map((leader) => (
-              <div key={leader.id} className="leader-card">
-                <div className="leader-image">
-                  {leader.image ? (
-                    <img src={leader.image} alt={leader.name} />
-                  ) : (
-                    <div className="leader-placeholder">
-                      {leader.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                  )}
-                </div>
-                <div className="leader-info">
-                  <h2 className="leader-name">{leader.name}</h2>
-                  <span className="leader-title">{leader.title}</span>
-                  <p className="leader-bio">{leader.bio}</p>
-                  <div className="leader-social">
-                    <a href="#" aria-label="LinkedIn">
-                      <FaLinkedin />
-                    </a>
-                    <a href="#" aria-label="Email">
-                      <FaEnvelope />
-                    </a>
+      <section className="leadership-section">
+        <div className="leadership-grid">
+          {leadership.map((leader) => (
+            <div key={leader.id} className="leader-card">
+              <div className="leader-image">
+                {leader.image ? (
+                  <img src={leader.image} alt={leader.name} />
+                ) : (
+                  <div className="leader-placeholder">
+                    {leader.name.split(' ').map(n => n[0]).join('')}
                   </div>
+                )}
+              </div>
+              <div className="leader-info">
+                <h2 className="leader-name">{leader.name}</h2>
+                <span className="leader-title">{leader.title}</span>
+                <p className="leader-bio">{leader.bio}</p>
+                <div className="leader-social">
+                  <a href="#" aria-label="LinkedIn">
+                    <FaLinkedin />
+                  </a>
+                  <a href="#" aria-label="Email">
+                    <FaEnvelope />
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="values-section section" style={{ backgroundColor: 'var(--accent-color)' }}>
+      <section className="values-section">
         <div className="container">
           <h2 className="section-title">Our Core Values</h2>
           <p className="section-subtitle">
