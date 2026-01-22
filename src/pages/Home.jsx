@@ -9,13 +9,19 @@ const Home = () => {
       <HeroCarousel />
 
       {/* Welcome Section */}
-      <section className="welcome-section section">
-        <div className="container">
-          <h2 className="section-title">Welcome to {companyInfo.name}</h2>
-          <p className="section-subtitle">
-            {companyInfo.tagline}. We proudly operate {restaurants.length} distinctive restaurant brands,
-            each offering unique culinary experiences that celebrate diverse cuisines and cultures.
-          </p>
+      <section className="welcome-section">
+        <div className="welcome-container">
+          <div className="welcome-header">
+            <span className="welcome-label">Welcome</span>
+            <h2 className="welcome-title">
+              Creating <em>Extraordinary</em> Dining Experiences
+            </h2>
+            <p className="welcome-subtitle">
+              We proudly operate {restaurants.length} distinctive restaurant brands,
+              each offering unique culinary experiences that celebrate diverse cuisines and cultures.
+            </p>
+          </div>
+
           <div className="welcome-features">
             <div className="feature">
               <div className="feature-number">{restaurants.length}</div>
@@ -27,37 +33,51 @@ const Home = () => {
             </div>
             <div className="feature">
               <div className="feature-number">100%</div>
-              <div className="feature-label">Commitment to Quality</div>
+              <div className="feature-label">Commitment</div>
             </div>
           </div>
-          <Link to="/our-brands" className="btn btn-primary">
-            Explore Our Restaurants
-          </Link>
+
+          <div className="welcome-cta">
+            <Link to="/our-brands" className="btn btn-primary">
+              <span>Explore Our Restaurants</span>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* About Preview Section */}
-      <section className="about-preview section" style={{ backgroundColor: 'var(--accent-color)' }}>
-        <div className="container">
-          <div className="about-grid">
+      <section className="about-preview">
+        <div className="about-grid">
+          <div className="about-image-side">
+            <div className="about-image-wrapper">
+              <div className="image-placeholder">
+                <img
+                  src="/BlueCilantroLogo.png"
+                  alt="BlueCilantro Hospitality Group"
+                  className="placeholder-logo"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="about-content-side">
             <div className="about-content">
-              <h2>Our Commitment to Excellence</h2>
-              <p>
+              <span className="about-label">Our Story</span>
+              <h2 className="about-title">
+                A Commitment to <em>Excellence</em>
+              </h2>
+              <p className="about-text">
                 At BlueCilantro Hospitality Group, we believe that great food brings people together.
-                Our portfolio of restaurants spans from authentic Italian street food to traditional
+                Our portfolio spans from authentic Italian street food to traditional
                 Indian cuisine, from beloved breakfast destinations to premium steakhouses.
               </p>
-              <p>
+              <p className="about-text">
                 Each of our brands is carefully curated to deliver exceptional dining experiences,
                 combining quality ingredients, passionate service, and welcoming atmospheres.
               </p>
-              <Link to="/vision" className="btn btn-outline-primary">
-                Learn More About Our Vision
-              </Link>
-            </div>
-            <div className="about-image">
-              <div className="image-placeholder">
-                <img src="/BlueCilantroLogo.png" alt="BlueCilantro Hospitality Group" className="placeholder-logo" />
+              <div className="about-cta">
+                <Link to="/vision" className="btn-ghost">
+                  Discover Our Vision
+                </Link>
               </div>
             </div>
           </div>

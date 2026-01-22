@@ -33,13 +33,17 @@ const HeroCarousel = () => {
                   <img
                     src={restaurant.logo}
                     alt={`${restaurant.name} logo`}
-                    className="carousel-logo"
+                    className={`carousel-logo ${restaurant.name === "Wendel Clark's" ? 'logo-with-bg' : ''}`}
                   />
                 </div>
                 <Carousel.Caption className="carousel-caption-custom">
-                  <h2 className="carousel-title">{restaurant.name}</h2>
-                  <p className="carousel-cuisine">{restaurant.cuisine}</p>
-                  <p className="carousel-description">{restaurant.description}</p>
+                  {restaurant.name === "BlueCilantro Catering" ? (
+                    <>
+                      {/* <h2 className="carousel-title">{restaurant.name}</h2> */}
+                      {/* <p className="carousel-cuisine">{restaurant.cuisine}</p>
+                      <p className="carousel-description">{restaurant.description}</p> */}
+                    </>
+                  ) : null}
                   <a
                     href={restaurant.website}
                     target="_blank"

@@ -4,56 +4,55 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: white;
-  transition: all 0.4s ease-out;
-  border-bottom: 1px solid transparent;
+  background: #ffffff;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 15px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header-scrolled {
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: #ffffff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+  padding: 10px 0;
 }
 
 .header-hidden {
-  top: -120px;
+  transform: translateY(-100%);
 }
 
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Logo Styles */
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .logo:hover {
-  opacity: 0.85;
+  transform: scale(1.02);
 }
 
 .logo-image {
-  height: 90px;
+  height: 80px;
   width: auto;
   object-fit: contain;
-  transition: all 0.4s ease-out;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-scrolled .logo-image {
-  height: 70px;
+  height: 60px;
 }
 
-/* Navigation Styles */
+/* Navigation */
 .nav {
   display: flex;
   align-items: center;
@@ -62,7 +61,7 @@
 .nav-list {
   display: flex;
   list-style: none;
-  gap: 0;
+  gap: 8px;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -74,54 +73,56 @@
 
 .nav-link {
   display: block;
-  padding: 20px 24px;
-  color: var(--text-dark);
-  font-weight: 500;
+  padding: 12px 20px;
+  font-family: 'DM Sans', sans-serif;
   font-size: 13px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  color: #1a1f3c !important;
   text-decoration: none;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
-.nav-link::after {
+.nav-link::before {
   content: '';
   position: absolute;
-  bottom: 8px;
-  left: 24px;
-  right: 24px;
+  bottom: 6px;
+  left: 20px;
+  width: calc(100% - 40px);
   height: 2px;
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, #c17f59 0%, #c9a962 100%);
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: #c17f59 !important;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
 
 .nav-link.active {
-  color: var(--primary-color);
+  color: #c17f59 !important;
 }
 
-.nav-link.active::after {
+.nav-link.active::before {
   transform: scaleX(1);
 }
+
 
 /* Mobile Menu Button */
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
-  color: var(--primary-color);
+  font-size: 24px;
+  color: #1a1f3c !important;
   cursor: pointer;
   padding: 10px;
   z-index: 1001;
@@ -129,37 +130,46 @@
 }
 
 .mobile-menu-btn:hover {
-  opacity: 0.7;
+  color: #c17f59 !important;
 }
 
 .mobile-overlay {
   display: none;
 }
 
-/* Mobile Styles */
+/* Tablet Styles */
 @media (max-width: 1100px) {
   .header-container {
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   .nav-link {
-    padding: 20px 16px;
+    padding: 12px 14px;
     font-size: 12px;
   }
 
-  .nav-link::after {
-    left: 16px;
-    right: 16px;
+  .nav-link::before {
+    left: 14px;
+    width: calc(100% - 28px);
   }
 }
 
+/* Mobile Styles */
 @media (max-width: 992px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  .header-scrolled {
+    padding: 10px 0;
+  }
+
   .header-container {
-    padding: 10px 20px;
+    padding: 0 24px;
   }
 
   .header-hidden {
-    top: -100px;
+    transform: translateY(-100%);
   }
 
   .mobile-menu-btn {
@@ -171,14 +181,16 @@
   .nav {
     position: fixed;
     top: 0;
-    right: -320px;
-    width: 300px;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
     height: 100vh;
-    background-color: white;
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
-    transition: right 0.4s ease-out;
-    padding-top: 100px;
+    background: var(--color-soft-cream);
+    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 120px 50px 50px;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-open {
@@ -187,25 +199,33 @@
 
   .nav-list {
     flex-direction: column;
-    padding: 20px 30px;
     gap: 0;
-    align-items: stretch;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(26, 31, 60, 0.08);
   }
 
   .nav-link {
-    padding: 18px 0;
-    font-size: 14px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 24px 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 100%;
   }
 
-  .nav-link::after {
-    display: none;
+  .nav-link::before {
+    bottom: 20px;
+    left: 0;
+    width: 30px;
+    height: 2px;
   }
 
-  .nav-link:hover,
-  .nav-link.active {
-    color: var(--primary-color);
-    padding-left: 10px;
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    transform: scaleX(1);
   }
 
   .mobile-overlay {
@@ -215,30 +235,31 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(26, 31, 60, 0.6);
+    backdrop-filter: blur(4px);
     z-index: 999;
     opacity: 0;
-    animation: fadeIn 0.3s ease forwards;
+    animation: overlayFadeIn 0.4s ease forwards;
   }
 
-  @keyframes fadeIn {
+  @keyframes overlayFadeIn {
     to {
       opacity: 1;
     }
   }
 
   .logo-image {
-    height: 60px;
+    height: 55px;
   }
 
   .header-scrolled .logo-image {
-    height: 55px;
+    height: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .header-container {
-    padding: 8px 15px;
+    padding: 0 20px;
   }
 
   .logo-image {
@@ -250,12 +271,11 @@
   }
 
   .nav {
-    width: 280px;
-    right: -280px;
+    padding: 100px 30px 30px;
   }
 
   .nav-link {
-    font-size: 13px;
-    padding: 16px 0;
+    font-size: 15px;
+    padding: 20px 0;
   }
 }
