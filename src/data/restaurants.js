@@ -6,7 +6,7 @@ export const restaurants = [
     description: "Authentic Italian street food experience featuring fresh pasta, paninis, and traditional recipes crafted with passion.",
     website: "https://viacibo.com/",
     logo: "https://viacibo.com/wp-content/uploads/2024/05/viacibo_logo.svg",
-    image: "https://viacibo.com/wp-content/uploads/2024/05/JUMPciboEXTa3s.jpg",
+    image: "https://viacibo.com/wp-content/uploads/2024/07/Tuesday_Pasta.png",
     // color: "#191213ff"
   },
   {
@@ -54,9 +54,9 @@ export const restaurants = [
     name: "BlueCilantro Catering",
     cuisine: "Catering Services",
     description: "We offer services for all occasions, specializing in corporate events, weddings, and private parties with customizable menus to suit your needs.",
-    website: "https://bahubali.ca/",
-    logo: "/BlueCilantro.png",
-    image: "/BlueCilantro.png",
+    website: "https://bluecilantro24.ca/",
+    logo: "/BlueCilantroCard.png",
+    image: "/BlueCilantroCard.png",
     // color: "#ff9f1c"
   }
 ];

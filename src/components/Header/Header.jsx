@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Header.css';
@@ -6,48 +6,69 @@ import './Header.css';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  const lastScrollYRef = useRef(0);
   const mouseTimeoutRef = useRef(null);
+  const isScrollingDownRef = useRef(false);
+
+  const hideHeader = useCallback(() => {
+    setIsHidden(true);
+  }, []);
+
+  const showHeader = useCallback(() => {
+    setIsHidden(false);
+  }, []);
+
+  const startHideTimer = useCallback(() => {
+    // Clear existing timeout
+    if (mouseTimeoutRef.current) {
+      clearTimeout(mouseTimeoutRef.current);
+    }
+    // Hide after 2 seconds of no movement
+    mouseTimeoutRef.current = setTimeout(hideHeader, 2000);
+  }, [hideHeader]);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const lastScrollY = lastScrollYRef.current;
 
       // Add scrolled class when past threshold
       setIsScrolled(currentScrollY > 50);
 
       // Hide immediately when scrolling down
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        isScrollingDownRef.current = true;
         setIsHidden(true);
+        // Clear any existing timeout
+        if (mouseTimeoutRef.current) {
+          clearTimeout(mouseTimeoutRef.current);
+        }
       } else if (currentScrollY < lastScrollY) {
         // Show when scrolling up
+        isScrollingDownRef.current = false;
         setIsHidden(false);
+        // Start the hide timer
+        startHideTimer();
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollYRef.current = currentScrollY;
     };
 
     const handleMouseMove = () => {
       // Show header on mouse movement
-      setIsHidden(false);
-
-      // Clear existing timeout
-      if (mouseTimeoutRef.current) {
-        clearTimeout(mouseTimeoutRef.current);
-      }
-
-      // Hide after 2 seconds of no movement
-      mouseTimeoutRef.current = setTimeout(() => {
-        if (window.scrollY > 50) {
-          setIsHidden(true);
-        }
-      }, 2000);
+      showHeader();
+      // Start the hide timer
+      startHideTimer();
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
+
+    // Start initial timer
+    startHideTimer();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -56,7 +77,7 @@ const Header = () => {
         clearTimeout(mouseTimeoutRef.current);
       }
     };
-  }, [lastScrollY]);
+  }, [hideHeader, showHeader, startHideTimer]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
