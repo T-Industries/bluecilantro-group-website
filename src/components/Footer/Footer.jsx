@@ -10,28 +10,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-main">
         <div className="footer-container">
-          {/* Company Info */}
-          <div className="footer-section">
-            <div className="footer-logo">
-              <img src="/BlueCilantroLogo.png" alt="BlueCilantro Hospitality Group" className="footer-logo-image" />
-            </div>
-            <p className="footer-tagline">{companyInfo.tagline}</p>
-            <div className="footer-social">
-              <a href={companyInfo.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF />
-              </a>
-              <a href={companyInfo.social.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                <FaInstagram />
-              </a>
-              <a href={companyInfo.social.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                <FaLinkedinIn />
-              </a>
-              <a href={companyInfo.social.twitter} aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                <FaTwitter />
-              </a>
-            </div>
-          </div>
-
           {/* Quick Links */}
           <div className="footer-section">
             <h4 className="footer-title">Quick Links</h4>
@@ -74,6 +52,20 @@ const Footer = () => {
                   {companyInfo.location.province}, {companyInfo.location.country}
                 </span>
               </div>
+            </div>
+            <div className="footer-social">
+              <a href={companyInfo.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <FaFacebookF />
+              </a>
+              <a href={companyInfo.social.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
+              <a href={companyInfo.social.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <FaLinkedinIn />
+              </a>
+              <a href={companyInfo.social.twitter} aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <FaTwitter />
+              </a>
             </div>
           </div>
         </div>
