@@ -3,6 +3,15 @@ import { FaBriefcase, FaUsers, FaGraduationCap, FaHeart, FaCheck } from 'react-i
 import { restaurants } from '../data/restaurants';
 import './Career.css';
 
+function readFileAsBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
 const Career = () => {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -15,6 +24,8 @@ const Career = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const positions = [
     'Server',
@@ -45,8 +56,8 @@ const Career = () => {
         setErrors(prev => ({ ...prev, resume: 'Please upload a PDF or DOC file' }));
         return;
       }
-      if (file.size > 5 * 1024 * 1024) {
-        setErrors(prev => ({ ...prev, resume: 'File size must be less than 5MB' }));
+      if (file.size > 3 * 1024 * 1024) {
+        setErrors(prev => ({ ...prev, resume: 'File size must be less than 3MB' }));
         return;
       }
       setFormData(prev => ({ ...prev, resume: file }));
@@ -67,16 +78,46 @@ const Career = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateForm();
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+
+    setIsLoading(true);
+    setSubmitError('');
+
+    try {
+      const resumeBase64 = await readFileAsBase64(formData.resume);
+
+      const response = await fetch('/api/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          position: formData.position,
+          restaurant: formData.restaurant,
+          coverLetter: formData.coverLetter,
+          resumeBase64,
+          resumeFilename: formData.resume.name,
+          resumeMimetype: formData.resume.type,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Submission failed. Please try again.');
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      setSubmitError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const resetForm = () => {
@@ -91,6 +132,7 @@ const Career = () => {
     });
     setIsSubmitted(false);
     setErrors({});
+    setSubmitError('');
   };
 
   return (
@@ -280,7 +322,7 @@ const Career = () => {
                     ) : (
                       <span>Drag & drop your resume or <strong>browse</strong></span>
                     )}
-                    <span className="file-hint">PDF or DOC (Max 5MB)</span>
+                    <span className="file-hint">PDF or DOC (Max 3MB)</span>
                   </div>
                 </div>
                 {errors.resume && <div className="error-message">{errors.resume}</div>}
@@ -301,8 +343,13 @@ const Career = () => {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary submit-btn">
-                Submit Application
+              {submitError && (
+                <div className="error-message" style={{ textAlign: 'center', marginBottom: '16px' }}>
+                  {submitError}
+                </div>
+              )}
+              <button type="submit" className="btn btn-primary submit-btn" disabled={isLoading}>
+                {isLoading ? 'Submitting...' : 'Submit Application'}
               </button>
             </form>
           )}
