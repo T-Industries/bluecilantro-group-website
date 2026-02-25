@@ -12,6 +12,8 @@ const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,15 +36,31 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateForm();
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-    console.log('Contact form submitted:', formData);
-    setIsSubmitted(true);
+    setIsLoading(true);
+    setSubmitError('');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        setSubmitError('Something went wrong. Please try again or contact us directly.');
+      }
+    } catch {
+      setSubmitError('Unable to send your message. Please check your connection and try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const resetForm = () => {
@@ -54,6 +72,7 @@ const Contact = () => {
     });
     setIsSubmitted(false);
     setErrors({});
+    setSubmitError('');
   };
 
   return (
@@ -207,8 +226,14 @@ const Contact = () => {
                     {errors.message && <div className="error-message">{errors.message}</div>}
                   </div>
 
-                  <button type="submit" className="btn btn-primary submit-btn">
-                    Send Message
+                  {submitError && (
+                    <div className="error-message" style={{ textAlign: 'center', marginBottom: '16px' }}>
+                      {submitError}
+                    </div>
+                  )}
+
+                  <button type="submit" className="btn btn-primary submit-btn" disabled={isLoading}>
+                    {isLoading ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}
