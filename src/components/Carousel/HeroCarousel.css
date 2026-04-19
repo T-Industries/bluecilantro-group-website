@@ -3,18 +3,10 @@
   position: relative;
 }
 
-/* Smooth Fade Transition */
+/* Smooth Fade Transition — override duration/easing only; let Bootstrap own opacity states */
 .hero-carousel .carousel-item {
-  transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.hero-carousel.carousel-fade .carousel-item {
-  opacity: 0;
-  transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.hero-carousel.carousel-fade .carousel-item.active {
-  opacity: 1;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-slide {
@@ -72,8 +64,8 @@
 }
 
 .carousel-logo {
-  max-width: 300px;
-  max-height: 140px;
+  max-width: 340px;
+  max-height: 180px;
   width: auto;
   height: auto;
   object-fit: contain;

@@ -2,7 +2,7 @@
 
 :root {
   /* Sophisticated Warm Palette */
-  --color-deep-navy: #1a1f3c;
+  --color-deep-navy: #141d55;
   --color-midnight: #0d1025;
   --color-warm-cream: #f5f0e8;
   --color-soft-cream: #faf8f5;
@@ -50,7 +50,7 @@ html {
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.7;
-  color: var(--text-primary);
+  color: #0d28c1;
   background-color: var(--color-soft-cream);
   font-weight: 400;
   font-size: 16px;

@@ -15,7 +15,7 @@ const HeroCarousel = () => {
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
-        interval={5000}
+        interval={3000}
         pause="hover"
         indicators={true}
         controls={true}

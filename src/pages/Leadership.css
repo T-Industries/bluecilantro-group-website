@@ -86,6 +86,7 @@
   width: 280px;
   height: 280px;
   object-fit: cover;
+  object-position: top;
 }
 
 .leader-placeholder {
