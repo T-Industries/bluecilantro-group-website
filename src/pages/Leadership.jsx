@@ -1,5 +1,5 @@
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { leadership } from '../data/restaurants';
+import { leadership, teamMembers } from '../data/restaurants';
 import './Leadership.css';
 
 const Leadership = () => {
@@ -48,6 +48,36 @@ const Leadership = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="team-section">
+        <div className="container">
+          <h2 className="section-title">Our Team</h2>
+          <p className="section-subtitle">
+            The dedicated people behind every plate, pour, and warm welcome across our brands.
+          </p>
+          <div className="team-grid">
+            {teamMembers.map((member) => (
+              <div key={member.id} className="team-card">
+                <div className="team-photo">
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} />
+                  ) : (
+                    <div className="team-photo-placeholder">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
+                </div>
+                <h3 className="team-name">{member.name}</h3>
+                <p className="team-title">{member.title}</p>
+                {member.restaurant && (
+                  <p className="team-restaurant">{member.restaurant}</p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

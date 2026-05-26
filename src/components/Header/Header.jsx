@@ -88,7 +88,7 @@ const Header = () => {
     { path: '/our-brands', label: 'Our Restaurants' },
     { path: '/leadership', label: 'Leadership' },
     { path: '/vision', label: 'Vision' },
-    { path: '/career', label: 'Career' },
+    { path: '/career', label: 'Careers' },
     { path: '/contact', label: 'Contact Us' },
   ];
 

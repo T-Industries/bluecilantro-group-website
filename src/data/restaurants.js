@@ -97,3 +97,62 @@ export const leadership = [
     image: "/ShaileshSuryawanshi.jpeg"
   }
 ];
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Nebyat Yojannes",
+    title: "Director of Operations",
+    restaurant: "",
+    image: "/team/Nebyat_Yojannes.jpeg"
+  },
+  {
+    id: 2,
+    name: "Ermie Bangero-Ambuan",
+    title: "Manager",
+    restaurant: "Wendel Clark's",
+    image: "/team/Ermie Bangero-Ambuan.jpeg"
+  },
+  {
+    id: 3,
+    name: "Kais Aissaoui",
+    title: "Kitchen Manager",
+    restaurant: "Cora Breakfast & Lunch",
+    image: "/team/Kais Aissaoui.jpeg"
+  },
+  {
+    id: 4,
+    name: "Nithin Ghagare",
+    title: "Assistant Restaurant General Manager",
+    restaurant: "Bâton Rouge",
+    image: "/team/Nithin Ghagare.jpeg"
+  },
+  {
+    id: 5,
+    name: "Penny Regards",
+    title: "Bar Manager",
+    restaurant: "Swan City Roadhouse",
+    image: "/team/Penny Regards.jpeg"
+  },
+  {
+    id: 6,
+    name: "Sher Singh",
+    title: "Kitchen Manager",
+    restaurant: "Swan City Roadhouse",
+    image: "/team/Sher Singh.jpeg"
+  },
+  {
+    id: 7,
+    name: "Kim Parker",
+    title: "Restaurant Manager",
+    restaurant: "Cora Breakfast & Lunch",
+    image: "/team/Kim parker.jpeg"
+  },
+  {
+    id: 8,
+    name: "Archdeep Singh",
+    title: "Kitchen Manager",
+    restaurant: "Via Cibo",
+    image: "/team/Archdeep Singh.jpeg"
+  }
+];
