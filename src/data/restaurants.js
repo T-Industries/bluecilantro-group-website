@@ -91,10 +91,17 @@ export const companyInfo = {
 export const leadership = [
   {
     id: 1,
-    name: "Sailessh Suryawanshi",
+    name: "Sailessh Surryawanshi",
     title: "Founder & CEO",
     bio: "Visionary leader driving Blue Cilantro's mission to create extraordinary dining experiences across diverse culinary traditions. With a commitment to excellence and community, Sailessh has built a portfolio that celebrates global cuisines while maintaining the highest standards.",
     image: "/ShaileshSuryawanshi.jpeg"
+  },
+  {
+    id: 2,
+    name: "Sandeep Samra.jpeg",
+    title: "CFO",
+    bio: "Experienced financial strategist overseeing Blue Cilantro's fiscal health and growth. With a background in finance and a passion for the hospitality industry, Sandeep ensures the company's financial stability while supporting its expansion and innovation goals.",
+    image: "/Sandeep samra.jpeg"
   }
 ];
 
