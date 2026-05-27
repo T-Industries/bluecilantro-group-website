@@ -101,7 +101,7 @@ export const leadership = [
 export const teamMembers = [
   {
     id: 1,
-    name: "Nebyat Yojannes",
+    name: "Nebyat Yohannes",
     title: "Director of Operations",
     restaurant: "",
     image: "/team/Nebyat_Yojannes.jpeg"
@@ -129,7 +129,7 @@ export const teamMembers = [
   },
   {
     id: 5,
-    name: "Penny Regards",
+    name: "Penny Beaugrand",
     title: "Bar Manager",
     restaurant: "Swan City Roadhouse",
     image: "/team/Penny Regards.jpeg"
