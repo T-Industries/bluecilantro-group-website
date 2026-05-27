@@ -51,22 +51,22 @@ export const restaurants = [
   },
   {
     id: 6,
+    name: "SwanCity RoadHouse",
+    cuisine: "Steakhouse & Bar",
+    description: "A modern steakhouse and bar offering a diverse menu of premium steaks, seafood, and classic comfort foods in a vibrant atmosphere.",
+    website: "https://www.swancityroadhouse.ca/",
+    logo: "/SwanCity_WhiteLogo.png",
+    image: "/SwanRoad.jpeg",
+    // color: "#ff9f1c"
+  },
+  {
+    id: 7,
     name: "BlueCilantro Catering",
     cuisine: "Catering Services",
     description: "We offer services for all occasions, specializing in corporate events, weddings, and private parties with customizable menus to suit your needs.",
     website: "https://bluecilantro24.ca/",
     logo: "/BlueCilantroCard.png",
     image: "/BlueCilantroCard.png",
-    // color: "#ff9f1c"
-  },
-  {
-    id: 7,
-    name: "SwanCity RoadHouse",
-    cuisine: "Steakhouse & Bar",
-    description: "A modern steakhouse and bar offering a diverse menu of premium steaks, seafood, and classic comfort foods in a vibrant atmosphere.",
-    website: "https://bluecilantro24.ca/",
-    logo: "/SwanCity_WhiteLogo.png",
-    image: "/SwanRoad.jpeg",
     // color: "#ff9f1c"
   }
 ];
