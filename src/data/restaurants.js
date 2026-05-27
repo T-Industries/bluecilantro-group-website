@@ -98,7 +98,7 @@ export const leadership = [
   },
   {
     id: 2,
-    name: "Sandeep Samra.jpeg",
+    name: "Sandeep Samra",
     title: "CFO",
     bio: "Experienced financial strategist overseeing Blue Cilantro's fiscal health and growth. With a background in finance and a passion for the hospitality industry, Sandeep ensures the company's financial stability while supporting its expansion and innovation goals.",
     image: "/Sandeep samra.jpeg"
